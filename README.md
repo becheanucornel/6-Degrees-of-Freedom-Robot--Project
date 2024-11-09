@@ -2,8 +2,9 @@
 
 This is one of my ongoing univeristy projects.
 The original version is made using MATLAB, but I wanted to make it easier to run using Python.
-This project splits into three phasis:
+This project splits into four phasis:
  - Kinematics in MATLAB
+ - Dynamics in MATLAB
  - Control in MATLAB
  - Design in CATIA V5 of the robot
 
