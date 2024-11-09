@@ -1,4 +1,4 @@
-# Robotic Kinematics - Project
+# 6 DoF Robot - Project
 
 This is one of my ongoing univeristy projects.
 The original version is made using MATLAB, but I wanted to make it easier to run using Python.
