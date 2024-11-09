@@ -9,4 +9,5 @@ This project splits into three phasis:
 
 I will rewrite the MATLAB scripts in Python and add to this repository as the progress comes through!
 
+Also if you would like to try out the scripts, they can work on their own without the main.py scirpt
 
