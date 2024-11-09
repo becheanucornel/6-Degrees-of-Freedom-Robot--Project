@@ -23,4 +23,4 @@ Otherwise, use the following commands in your IDE terminal:
 
  Also make sure you have python installed on your system.
 
-![](README\READMEPictures\GeomtricModelExample.png?raw=true "Geomtric Model Example")
+![Alt text](README\READMEPictures\GeomtricModelExample.png?raw=true "Geomtric Model Example")
