@@ -75,6 +75,8 @@ class RobotArm:
 
         # Plot the robot arm using Matplotlib
         fig = plt.figure()
+        plt.title("Geometric Model")
+        fig.canvas.manager.set_window_title("GeometricModel")
         ax = fig.add_subplot(111, projection='3d')
         ax.grid(True)
 

@@ -104,20 +104,20 @@ def main():
             plt.show()
 
     # Define joint start and end angles
-    unghi_start = np.array([0.9, -0.7, -2, 1, 0.8, 1])  # Example start angles (replace with actual values)
-    unghi_sfarsit = np.array([3, -2, -0.8, 1, 1.2, 1])  # Example end angles (replace with actual values)
-    timp_animatie = 5  # Total animation time (in seconds)
+    start_angle = np.array([0.9, -0.7, -2, 1, 0.8, 1])  # Example start angles (replace with actual values)
+    finish_angle = np.array([3, -2, -0.8, 1, 1.2, 1])  # Example end angles (replace with actual values)
+    animation_duration = 5  # Total animation time (in seconds)
 
     # Create time vector for the animation
-    t = np.linspace(0, timp_animatie, 50)
+    t = np.linspace(0, animation_duration, 50)
 
     # Compute joint angles over time
-    Q1 = np.linspace(unghi_start[0], unghi_sfarsit[0], len(t))
-    Q2 = np.linspace(unghi_start[1], unghi_sfarsit[1], len(t))
-    Q3 = np.linspace(unghi_start[2], unghi_sfarsit[2], len(t))
-    Q4 = np.linspace(unghi_start[3], unghi_sfarsit[3], len(t))
-    Q5 = np.linspace(unghi_start[4], unghi_sfarsit[4], len(t))
-    Q6 = np.linspace(unghi_start[5], unghi_sfarsit[5], len(t))
+    Q1 = np.linspace(start_angle[0], finish_angle[0], len(t))
+    Q2 = np.linspace(start_angle[1], finish_angle[1], len(t))
+    Q3 = np.linspace(start_angle[2], finish_angle[2], len(t))
+    Q4 = np.linspace(start_angle[3], finish_angle[3], len(t))
+    Q5 = np.linspace(start_angle[4], finish_angle[4], len(t))
+    Q6 = np.linspace(start_angle[5], finish_angle[5], len(t))
 
     # Initialize the list to store the positions of the end-effector
     l = np.zeros((3, len(t)))
@@ -129,6 +129,8 @@ def main():
 
     # Set up the figure and 3D axis (only once)
     fig = plt.figure()
+    plt.title("Animation")
+    fig.canvas.manager.set_window_title("Animation")
     ax = fig.add_subplot(111, projection='3d')
     ax.grid(True)
     # Configure plot appearance
