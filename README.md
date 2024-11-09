@@ -3,7 +3,7 @@
 This is one of my ongoing univeristy projects.
 The original version is made using MATLAB, but I wanted to make it easier to run using Python.
 I'm modeling an industrial robot with 6DoF.
-This project splits into four phasis:
+This project splits into four phases:
  - Kinematics in MATLAB
  - Dynamics in MATLAB
  - Control in MATLAB
