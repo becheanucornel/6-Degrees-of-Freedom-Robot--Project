@@ -40,7 +40,7 @@ There are a lot of industrial robot types, such as:
 
 In this project we will focus on the 6DoF Robot and we will try design one in terms of Kinematics, Dynamics, Control and 3D Design.
 
-## Geomtric Model
+## Geometric Model
 
 To design geometrically an industrial robot, first we need to simplify the problem.
 We are doing this by simply considering just the joints of the robot.
@@ -57,6 +57,7 @@ We will consider:
  - Joint 4 - Wrist 1
  - Joint 5 - Wrist 2
  - Joint 6 - Wrist 3
+
 This is similar to how joints are named in an Universal Robots Cobot, such as UR3, UR5, UR10.
 We will use this naming system because it makes the robot resemble a human arm.
 
