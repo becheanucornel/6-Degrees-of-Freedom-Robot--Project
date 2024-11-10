@@ -80,7 +80,7 @@ def main():
 
     # Define joint start and end angles
     start_angle = np.array([0.9, -0.7, -2, 1, 0.8, 1])
-    finish_angle = np.array([3, -2, -0.8, 1, 1.2, 1])
+    finish_angle = np.array([3, -2, -0.8, -1, 1.2, 1])
     animation_duration = 5  # Total animation time (in seconds)
 
     # Create time vector for the animation
