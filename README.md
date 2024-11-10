@@ -4,9 +4,10 @@
 This is one of my ongoing univeristy projects.
 The original version is made using MATLAB, but I wanted to make it easier to run using Python.
 For this project I'm designing an industrial robot with 6DoF.
-This project splits into four phases:
- - Kinematics in MATLAB
- - Dynamics in MATLAB
+This project splits into five phases:
+ - Geometric Model in MATLAB
+ - Kinematic Model in MATLAB
+ - Dynamic Model in MATLAB
  - Control in MATLAB
  - 3D Design in CATIA V5 of the robot
 
@@ -38,7 +39,7 @@ There are some industrial robot types, such as:
  - 6DoF Robots (Robot Arm)
  - AMRs (AGVs)
 
-In this project we will focus on the 6DoF Robot and we will try design one in terms of Kinematics, Dynamics, Control and 3D Design.
+In this project we will focus on the 6DoF Robot and we will try design one in terms of Geometry, Kinematics, Dynamics, Control and 3D Design.
 
 ## Geometric Model
 
