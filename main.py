@@ -1,5 +1,6 @@
 import geometry
 import animation
+import trajectory
 import time
 
 def main():
@@ -10,6 +11,8 @@ def main():
     geometry.main()
     time.sleep(1)
     animation.main()
+    time.sleep(1)
+    trajectory.main()
 
 if __name__ == "__main__":
     main()
