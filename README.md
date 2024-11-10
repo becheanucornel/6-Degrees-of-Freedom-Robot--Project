@@ -78,7 +78,7 @@ Therefore our geometrical system will look like this:
 From this forward we will use the homogenous transformations to describe the dependencies between each joints' coordinate systems.
 ![Alt text](README/READMEPictures/Transformations.png?raw=true "Homogenous Transformations")
 
-In the end our Geomtric Model will look like this:
+In the end our Geometric Model will look like this:
 
 ![Alt text](README/READMEPictures/GeomtricModelExample.png?raw=true "Geomtric Model Example")
 
