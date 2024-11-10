@@ -5,7 +5,7 @@ from mpl_toolkits.mplot3d import Axes3D
 
 # Function to print a loading message with a delay
 def printHello():
-    print("\nLoading...\n")
+    print("\nLoading Geometric Model...\n")
     time.sleep(1.5)
 
 # Define the RobotArm class
@@ -65,15 +65,17 @@ class RobotArm:
         T5_0 = T4_0 @ T5_4
         Te_0 = T5_0 @ Te_5
 
-        # Create the visualizations (lines representing the arm segments)
-        elem1 = np.array([T1_0[0:3, 3], T2_0[0:3, 3]]).T
-        elem2 = np.array([T2_0[0:3, 3], T3_0[0:3, 3]]).T
-        elem3 = np.array([T3_0[0:3, 3], T4_0[0:3, 3]]).T
-        elem4 = np.array([T4_0[0:3, 3], T5_0[0:3, 3]]).T
-        elem5 = np.array([T5_0[0:3, 3], Te_0[0:3, 3]]).T
-        elem6 = np.array([Te_0[0:3, 3]]).T
+        # Collect joint positions for plotting
+        joint_positions = [
+            T1_0[0:3, 3],
+            T2_0[0:3, 3],
+            T3_0[0:3, 3],
+            T4_0[0:3, 3],
+            T5_0[0:3, 3],
+            Te_0[0:3, 3]
+        ]
 
-        # Plot the robot arm using Matplotlib
+        # Plot the robot arm
         fig = plt.figure()
         plt.title("Geometric Model")
         fig.canvas.manager.set_window_title("GeometricModel")
@@ -83,23 +85,22 @@ class RobotArm:
         # Plot pedestal (base of the robot arm)
         ax.plot([0, 0], [0, 0], [0.2, -1], linewidth=7, color='k')
 
-        # Plot connecting arms (using different colors)
-        ax.plot(elem1[0, :], elem1[1, :], elem1[2, :], linewidth=2, color='#77AC30')
-        ax.plot(elem2[0, :], elem2[1, :], elem2[2, :], linewidth=2, color='#0072BD')
-        ax.plot(elem3[0, :], elem3[1, :], elem3[2, :], linewidth=2, color='r')
-        ax.plot(elem4[0, :], elem4[1, :], elem4[2, :], linewidth=2, color='#EDB120')
-        ax.plot(elem5[0, :], elem5[1, :], elem5[2, :], linewidth=2, color='#4DBEEE')
+        # Define colors for each segment
+        colors = ['#77AC30', '#0072BD', 'r', '#EDB120', '#4DBEEE']
 
-        # Plot joints (couplings), marked with 'o' (purple)
-        ax.plot(elem1[0, 0], elem1[1, 0], elem1[2, 0], 'o', markersize=7, markerfacecolor='m')
-        ax.plot(elem2[0, 0], elem2[1, 0], elem2[2, 0], 'o', markersize=7, markerfacecolor='m')
-        ax.plot(elem3[0, 0], elem3[1, 0], elem3[2, 0], 'o', markersize=7, markerfacecolor='m')
-        ax.plot(elem4[0, 0], elem4[1, 0], elem4[2, 0], 'o', markersize=7, markerfacecolor='m')
-        ax.plot(elem5[0, 0], elem5[1, 0], elem5[2, 0], 'o', markersize=7, markerfacecolor='m')
-        ax.plot(elem6[0, 0], elem6[1, 0], elem6[2, 0], 'o', markersize=7, markerfacecolor='m')
+        # Plot arm segments and joints
+        for i in range(len(joint_positions) - 1):
+            start = joint_positions[i]
+            end = joint_positions[i + 1]
+            ax.plot([start[0], end[0]], [start[1], end[1]], [start[2], end[2]],
+                    linewidth=2, color=colors[i])
 
-        # Plot end-effector (using 'v' symbol for the end point)
-        ax.plot(elem6[0, :], elem6[1, :], elem6[2, :] - 0.2, 'v', markersize=5, markerfacecolor='b')
+            # Plot joint markers
+            ax.plot(start[0], start[1], start[2], 'o', markersize=7, color='purple')
+        
+        # Plot the last joint (end-effector)
+        ax.plot(joint_positions[-1][0], joint_positions[-1][1], joint_positions[-1][2],
+                'o', markersize=7, color='purple')
 
         # Configure plot appearance
         ax.set_xlabel('x')
@@ -127,8 +128,6 @@ def main():
     q4 = 1
     q5 = 0.8
     q6 = 1
-
-    flag = 1
 
     # Create an instance of the RobotArm class and visualize the geometry
     robot_arm = RobotArm(q1, q2, q3, q4, q5, q6)

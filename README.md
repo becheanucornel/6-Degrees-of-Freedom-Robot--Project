@@ -33,10 +33,10 @@ Otherwise, use the following commands in your IDE terminal:
 
 An industrial robot is a complex mechatronic system that performs a repetitive task with great precision.
 
-There are a lot of industrial robot types, such as:
+There are some industrial robot types, such as:
  - 4DoF Robots (SCARA)
  - 6DoF Robots (Robot Arm)
- - Cartesian Robots
+ - AMRs (AGVs)
 
 In this project we will focus on the 6DoF Robot and we will try design one in terms of Kinematics, Dynamics, Control and 3D Design.
 
@@ -71,6 +71,16 @@ Now need to describe geometrically our system.
 For this we will use homogenous transformations to describe the dependencies of joints' coordiante systems to each other.
 We use homogenous transformations because they are a powerful mathematical tool that lets us describe both rotation and translation between two coordinate systems.
 
+Therefore our geometrical system will look like this:
+
+![Alt text](README/READMEPictures/schematicDiagram.png?raw=true "Geometric Diagram")
+
+From this forward we will use the homogenous transformations to describe the dependencies between each joints' coordinate systems.
+![Alt text](README/READMEPictures/Transformations.png?raw=true "Homogenous Transformations")
+
 In the end our Geomtric Model will look like this:
 
 ![Alt text](README/READMEPictures/GeomtricModelExample.png?raw=true "Geomtric Model Example")
+
+It is also important to mention that by having a geometrical description between the end effector and the base, we are a step closer to
+moving the robot where we want more easily, something we will discuss in the future.
