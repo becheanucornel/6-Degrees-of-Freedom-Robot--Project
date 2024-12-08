@@ -10,11 +10,6 @@ This project splits into five phases:
  - Control in MATLAB
  - 3D Design in CATIA V5 of the robot
 
-I will rewrite the MATLAB scripts in Python and add to this repository as the progress comes through!
-Once the entire project is completed, I will also add the MATLAB scripts in this repository.
-
-Also if you would like to try out the scripts, they can work on their own without the main.py script
-
 # Installation
 If you already have installed the necessary packages, ignore this step.
 Otherwise, use the following commands in your IDE terminal:
@@ -27,16 +22,11 @@ Otherwise, use the following commands in your IDE terminal:
 # Documentation
 
  Disclaimer - Please note that the documentation for this project is not complete!
- I am currently working on it, so there are picture missing and the explanations are not really great. They will need changes.
+ Some information might not be on point and must be changed.
 
 ## Industrial Robot
 
 An industrial robot is a complex mechatronic system that performs a repetitive task with great precision.
-
-There are some industrial robot types, such as:
- - 4DoF Robots (SCARA)
- - 6DoF Robots (Robot Arm)
- - AMRs (AGVs)
 
 In this project we will focus on the 6DoF Robot and we will try design one in terms of Geometry, Kinematics, Dynamics, Control and 3D Design.
 
@@ -82,5 +72,6 @@ In the end our Geometric Model will look like this:
 
 ![Alt text](README/READMEPictures/GeomtricModelExample.png?raw=true "Geomtric Model Example")
 
-It is also important to mention that by having a geometrical description between the end effector and the base, we are a step closer to
-moving the robot where we want more easily, something we will discuss in the future.
+It is also important to mention that by having a geometrical description between the end effector and the base, we are a step closer to moving the robot where we want more easily, something we will discuss in the future.
+
+## Kinematics Model
