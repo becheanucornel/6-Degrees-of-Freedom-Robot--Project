@@ -73,5 +73,5 @@ It is also important to mention that by having a geometrical description between
 
 ## Kinematics Model
 [**ONGOING DEV**]
-This part's transition into python is still in transition.
+This part's transition into python is still in development.
 The complete version of the project is available in MATLAB.
