@@ -1,6 +1,6 @@
 # 6 Degrees of Freedom Robot - Project
 
-This is one of my ongoing univeristy projects.
+This is one of my third year's univeristy projects.
 The original version is made using MATLAB, but I wanted to make it easier to run using Python.
 For this project I'm designing an industrial robot with 6DoF.
 This project splits into two phases:
@@ -15,11 +15,6 @@ Otherwise, use the following commands in your IDE terminal:
  - pip install matplotlib
 
  Also make sure you have python installed on your system.
-
-# Documentation
-
- Disclaimer - Please note that the documentation for this project is not complete!
- Some information might not be on point and must be changed.
 
 ## Industrial Robot
 
@@ -45,7 +40,6 @@ We will consider:
  - Joint 5 - Wrist 2
  - Joint 6 - Wrist 3
 
-This is similar to how joints are named in an Universal Robots Cobot, such as UR3, UR5, UR10.
 We will use this naming system because it makes the robot resemble a human arm.
 
 For each joint ne need to have a coordinate system.
