@@ -3,12 +3,9 @@
 This is one of my ongoing univeristy projects.
 The original version is made using MATLAB, but I wanted to make it easier to run using Python.
 For this project I'm designing an industrial robot with 6DoF.
-This project splits into five phases:
+This project splits into two phases:
  - Geometric Model in MATLAB
  - Kinematic Model in MATLAB
- - Dynamic Model in MATLAB
- - Control in MATLAB
- - 3D Design in CATIA V5 of the robot
 
 # Installation
 If you already have installed the necessary packages, ignore this step.
@@ -75,3 +72,6 @@ In the end our Geometric Model will look like this:
 It is also important to mention that by having a geometrical description between the end effector and the base, we are a step closer to moving the robot where we want more easily, something we will discuss in the future.
 
 ## Kinematics Model
+[**ONGOING DEV**]
+This part's transition into python is still in transition.
+The complete version of the project is available in MATLAB.
